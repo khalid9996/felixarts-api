@@ -11,6 +11,7 @@ export const dbConnect = () => {
         console.log("Successfully connected to database");
       })
       .catch((error) => {
+        console.log(process.env.DATABASE_URL);
         console.log(`Error connecting to database ${error}`);
         return process.exit(1);
       });
