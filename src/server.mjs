@@ -39,9 +39,9 @@ app.all("*", (req, res) => {
   res.status(404).json({ message: `${req.originalUrl} not found` });
 });
 
-const httpServer = new http.Server(app);
+export const httpServer = new http.Server(app);
 
-httpServer.listen(SERVER_PORT, () => {
-  dbConnect();
-  console.log(`SERVER RUNNING ON PORT ${SERVER_PORT}`);
-});
+// httpServer.listen(SERVER_PORT, () => {
+dbConnect();
+//   console.log(`SERVER RUNNING ON PORT ${SERVER_PORT}`);
+// });
